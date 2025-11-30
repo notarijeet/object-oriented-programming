@@ -158,3 +158,47 @@ int main() {
 
 }
 
+
+//Inheritance and destructor;
+#include <bits/stdc++.h>
+using namespace std;
+
+class person {
+public:
+    string name;
+    int age;
+
+    person() {
+        cout << "parent constructor" << endl;
+    }
+    
+    ~person(){
+        cout<<"parent destructor"<<endl;
+    }
+};
+
+class student : public person {
+public:
+    student() {
+        cout << "child constructor" << endl;
+    }
+    
+    ~student(){
+        cout<<"child destructor"<<endl;
+    }
+
+    void getinfo() {
+        cout << name << " " << age << endl;
+    }
+};
+
+int main() {
+    student s1;   // object creation
+    s1.name = "arijeet";
+    s1.age = 19;
+    s1.getinfo();
+
+    return 0;
+}
+
+
