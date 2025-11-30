@@ -83,3 +83,78 @@ int main() {
 	return 0;
 
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class student{
+public:
+
+    //constructor
+    student(){
+    
+        cout<<"Hello! Students"<<endl;
+        
+    }
+    //constructor overloading
+    //In c++ , defined as Having multiple constructor with same class name but with different parameterised.
+    //parameterised constructor
+    student(string name,int num){
+        this->name = name;
+        this->num = num;
+        
+    }
+    student(int c,int d){
+        cl1 = c;
+        cl2 = d;
+        cout<<cl1<<cl2<<endl;
+    }
+    
+    string name;
+    int num;
+    int cl1;
+    int cl2;
+    
+    //getter
+    void getdetail(){
+        cout<<"name : "<<name<<"age : "<<num<<endl;
+    }
+    
+    class person{
+    public:    
+        string name1;
+        int age1;
+        
+        
+    };
+    
+    class student1 : public person{
+    public:
+        void getinfo(){
+            cout<<"name: "<<name1<<"age"<<age<<endl;
+        }
+    };
+    
+    
+};
+
+
+int main() {
+	// your code goes here
+	student s1("arijeet",19);
+	s1.getdetail();
+	student s2(4,5);
+	//copy constructor
+	student s3(s1);
+	s3.getdetail();
+	
+	student1 su1;
+	su1.name1 = "Yash";
+	su1.age1 = 19;
+	su1.getinfo();
+	
+	
+	return 0;
+
+}
+
